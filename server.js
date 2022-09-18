@@ -19,18 +19,18 @@ app.use(express.static('website'));
 const port = 4000;
 const hostname = "127.0.0.1"
 // Setup Server
-function listening(){
+function listening() {
     console.log(`Server running at http://${hostname}:${port}/`)
 }
 
 // Initialize all route
 app.get('/all', function (req, res) {
     res.send(projectData);
-  })
+})
 
 // Post Route
-app.post("/add", function(req,res){
-    projectData=req.body;
+app.post("/add", function (req, res) {
+    projectData = req.body;
     console.log(projectData)
     res.send(projectData)
 }
